@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cookie Servlet</title>
+</head>
+<body>
+<h2>Existing Cookies:</h2>
+<pre id="existing-cookies"></pre>
+<h2>Set New Cookie:</h2>
+<form action="cookie" method="get">
+<label for="username">Username:</label>
+<input type="text" id="username" name="username">
+<button type="submit">Set Cookie</button>
+</form>
+<script>
+// Display existing cookies
+var existingCookies = document.cookie.split('; ');
+var existingCookiesText = "";
+for (var i = 0; i < existingCookies.length; i++) {
+existingCookiesText += existingCookies[i] + "\n";
+}
+document.getElementById("existing-cookies").textContent =
+existingCookiesText;
+</script>
+</body>
+</html>
